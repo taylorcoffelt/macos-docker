@@ -1,0 +1,5 @@
+images
+*.qcow2
+*.img
+.idea
+firmware

@@ -1,0 +1,20 @@
+version: "2"
+services:
+  macos:
+    container_name: macos
+    privileged: true
+    hostname: macos
+    image: taylorcoffelt/macos-docker
+    environment:
+      - SYSTEM_DISK=MyDisk.qcow2
+      - HEADLESS=1
+      - MEM=2G
+      - CPUS=4
+    ports:
+      - 5900:5900
+      - "2222:22"
+    volumes:
+      - ./MyDisk.qcow2:/macostools/MyDisk.qcow2
+      - ./BaseSystem.img:/macostools/BaseSystem.img
+      - ./ESP.qcow2:/macostools/ESP.qcow2
+      - ./firmware:/macostools/firmware

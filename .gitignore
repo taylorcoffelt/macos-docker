@@ -1,0 +1,4 @@
+firmware/
+*.qcow2
+.idea/
+*.img
