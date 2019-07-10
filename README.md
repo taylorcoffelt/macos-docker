@@ -30,14 +30,22 @@ _Runs a macOS image on QEMU in a docker container, with VNC and SSH access_
 
 ## Build Yourself
 
-Docker build . -t macos-docker
+`docker build . -t macos-docker`
 
-Mount the following volumes:
+To run, mount the following volumes:
 
  - ./MyDisk.qcow2:/macostools/MyDisk.qcow2
  - ./BaseSystem.img:/macostools/BaseSystem.img
  - ./ESP.qcow2:/macostools/ESP.qcow2
  - ./firmware:/macostools/firmware
+
+And set the following environment variables:
+ - SYSTEM_DISK=MyDisk.qcow2
+ - HEADLESS=1
+ - MEM=2G
+ - CPUS=4
+ 
+ Refer to the macOS-Simple-KVM repo for more info on customization
  
 ## Notes
 The base image built by the `macOS-Simple-KVM` tool has UUIDs that have been flagged by apple from too many setups, and so you likely won't be able to sign in to an apple account until you change them.
