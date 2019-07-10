@@ -38,7 +38,13 @@ Mount the following volumes:
  - ./BaseSystem.img:/macostools/BaseSystem.img
  - ./ESP.qcow2:/macostools/ESP.qcow2
  - ./firmware:/macostools/firmware
+ 
+## Notes
+The base image built by the `macOS-Simple-KVM` tool has UUIDs that have been flagged by apple from too many setups, and so you likely won't be able to sign in to an apple account until you change them.
+I recommend [clover-configurator] to modify the system to have new UUIDs before attempting to sign in to your apple account.
+You can also use the same tool to modify the default resolution of your macOS image
 
 
+[clover-configurator]: https://mackie100projects.altervista.org/download-clover-configurator/
 [foxlet]: https://github.com/foxlet/macOS-Simple-KVM
 [macOS-Simple-KVM tool]: https://github.com/foxlet/macOS-Simple-KVM
