@@ -3,7 +3,7 @@
 ##### Built on the great work from [foxlet]
 
 What this does: \
-_Runs a macOS image on QEMU in a docker container, with VNC and SSH access_
+_Runs a macOS image on QEMU in a docker container, with VNC and SSH access on alpine linux_
 
 ## Setup
 
