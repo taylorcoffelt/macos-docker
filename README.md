@@ -2,7 +2,7 @@
 
 ##### Built on the great work from [foxlet]
 
-_Runs a macOS image on QEMU in a docker container, with VNC and SSH access on alpine linux_
+_Runs a macOS image on QEMU in a docker container, with VNC, SSH and SPICE access on alpine linux_
 
 ## Setup
 
