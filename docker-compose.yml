@@ -8,10 +8,12 @@ services:
     environment:
       - SYSTEM_DISK=MyDisk.qcow2
       - HEADLESS=1
-      - MEM=2G
+      - MEM=4G
       - CPUS=4
+      - SPICE=1
     ports:
-      - 5900:5900
+      - "5900:5900"
+      - "5930:5930"
       - "2222:22"
     volumes:
       - ./MyDisk.qcow2:/macostools/MyDisk.qcow2

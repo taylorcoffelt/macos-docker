@@ -28,6 +28,10 @@ MOREARGS=()
     MOREARGS+=(-nographic -vnc :0 -k en-us)
 }
 
+[[ "$SPICE" = "1" ]] &&{
+    MOREARGS+=(-spice port=5930,disable-ticketing)
+}
+
 qemu-system-x86_64 \
     -enable-kvm \
     -m $MEM \

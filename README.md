@@ -24,8 +24,9 @@ _Runs a macOS image on QEMU in a docker container, with VNC and SSH access_
  - Copy/Move your `BaseSystem.img` and `MyDisk.qcow2` image into this directory
  - Run `docker-compose up` 
  
- VNC will be available on localhost port 5900
- SSH will be available on localhost port 2222 (If turned on in the `Settings > Sharing > Remote Access` in your macOS image)
+ VNC will be available on localhost port 5900 \
+ SSH will be available on localhost port 2222 (If turned on in the `Settings > Sharing > Remote Access` in your macOS image) \
+ SPICE (along with system audio) will be available on localhost port 5930  (`remote-viewer spice://localhost:5930`)
 
 
 ## Build Yourself
