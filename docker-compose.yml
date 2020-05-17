@@ -1,4 +1,4 @@
-version: "2"
+version: "3.2"
 services:
   macos:
     container_name: macos
@@ -16,7 +16,8 @@ services:
       - "5930:5930"
       - "2222:22"
     volumes:
-      - ./MyDisk.qcow2:/macostools/MyDisk.qcow2
-      - ./BaseSystem.img:/macostools/BaseSystem.img
-      - ./ESP.qcow2:/macostools/ESP.qcow2
-      - ./firmware:/macostools/firmware
+      - .:/macostools
+      #- ./MyDisk.qcow2:/macostools/MyDisk.qcow2
+      #- ./BaseSystem.img:/macostools/BaseSystem.img
+      #- ./ESP.qcow2:/macostools/ESP.qcow2
+      #- ./firmware:/macostools/firmware
